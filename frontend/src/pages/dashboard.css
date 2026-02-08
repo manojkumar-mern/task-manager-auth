@@ -1,0 +1,287 @@
+/* ===============================
+   Dashboard UI - Clean Styling
+================================== */
+
+body {
+    background: #f5f6fb;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* center container horizontally */
+    background: #f5f6fb;
+    padding: 30px 0;
+}
+
+.dashboard__container {
+    width: 100%;
+    max-width: 950px;
+    /* makes it smaller than screen */
+    margin: 0 auto;
+    /* centers it */
+    padding: 0 18px;
+}
+
+.dashboard__heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 20px;
+}
+
+.card__sub {
+    margin-top: 6px;
+    color: #666;
+}
+
+/* STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.stats__card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.stats__card h4 {
+    margin: 0;
+    color: #666;
+    font-weight: 600;
+}
+
+.stats__card p {
+    margin: 10px 0 0;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* INPUT */
+.input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+}
+
+.input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+/* BUTTONS */
+.btn {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn--primary {
+    background: #6366f1;
+    color: #fff;
+}
+
+.btn--ghost {
+    background: transparent;
+    border: 1px solid #ddd;
+}
+
+.btn--danger {
+    background: #ef4444;
+    color: #fff;
+}
+
+/* SECTION TITLE */
+.section-title {
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+/* FILTERS */
+.filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.count {
+    margin-top: 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* TASK FORM */
+.taskform__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.taskform__title {
+    margin: 0;
+}
+
+.taskform__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.taskform__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* TASK ITEM */
+.taskitem {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+}
+
+.taskitem--done {
+    opacity: 0.65;
+    text-decoration: line-through;
+}
+
+.taskitem__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.taskitem__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.taskitem__desc {
+    margin: 6px 0 0;
+    color: #555;
+}
+
+.taskitem__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+/* BADGES */
+.badge {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+}
+
+.badge--low {
+    border-color: #22c55e;
+}
+
+.badge--medium {
+    border-color: #f59e0b;
+}
+
+.badge--high {
+    border-color: #ef4444;
+}
+
+.badge--due {
+    border-color: #6366f1;
+}
+
+.badge--overdue {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.12);
+}
+
+/* ACTION BUTTONS */
+.taskitem__actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+/* EMPTY */
+.empty {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .taskitem__top {
+        flex-direction: column;
+    }
+
+    .taskform__row {
+        grid-template-columns: 1fr;
+    }
+
+    .taskitem__actions {
+        flex-direction: column;
+    }
+}

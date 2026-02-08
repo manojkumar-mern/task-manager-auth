@@ -1,0 +1,128 @@
+.auth {
+    min-height: calc(100vh - 70px);
+    /*  navbar height adjust */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f3f4f6;
+}
+
+.auth__card {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.auth__input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+.auth__input:focus {
+    border-color: #22c55e;
+}
+
+.auth__btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #22c55e;
+    color: #052e16;
+}
+
+.auth__btn:hover {
+    opacity: 0.9;
+}
+
+.auth__error {
+    color: red;
+    text-align: center;
+}
+
+.auth__forgot {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.auth__forgot a {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.auth__forgot a:hover {
+    text-decoration: underline;
+}
+
+.auth__subtext {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.auth__card--forgot {
+    min-height: 320px;
+    /* 👈 key fix */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth__card--forgot .auth__form {
+    gap: 16px;
+}
+
+.auth__card--forgot {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth__subtext {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.auth-footer {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.back-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
