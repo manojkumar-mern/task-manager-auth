@@ -8,13 +8,17 @@ connectDB();
 
 const app = express();
 
-// Allow Vercel + localhost
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      /\.vercel\.app$/, // allow all vercel deployments
-    ],
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+
+      if (origin.includes("vercel.app") || origin.includes("localhost")) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   }),
 );
@@ -31,5 +35,5 @@ app.use("/api/tasks", require("./routes/taskRoutes"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on ${PORT}`);
 });
