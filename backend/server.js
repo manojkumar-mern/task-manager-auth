@@ -8,17 +8,21 @@ connectDB();
 
 const app = express();
 
-// Enable CORS
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://task-manager-auth-mern.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
 
-// Parse JSON
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("API running ✅");
+  res.send("API running");
 });
 
-// Routes
+// routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
