@@ -8,10 +8,13 @@ connectDB();
 
 const app = express();
 
+// Allow Vercel + localhost
 app.use(
   cors({
-    origin: ["https://task-manager-auth-mern.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: [
+      "http://localhost:5173",
+      /\.vercel\.app$/, // allow all vercel deployments
+    ],
     credentials: true,
   }),
 );
@@ -28,5 +31,5 @@ app.use("/api/tasks", require("./routes/taskRoutes"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
