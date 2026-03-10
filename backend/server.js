@@ -8,28 +8,17 @@ connectDB();
 
 const app = express();
 
-// CORS configuration
-app.use(
-  cors({
-    origin: [
-      "https://task-manager-auth-d7g9a55n4-manojkumar-merns-projects.vercel.app",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  }),
-);
+// Enable CORS
+app.use(cors());
 
-// allow preflight requests
-app.options("*", cors());
-
+// Parse JSON
 app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("API running ✅");
 });
 
-// routes
+// Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
