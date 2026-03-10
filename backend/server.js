@@ -11,11 +11,7 @@ const app = express();
 // CORS FIX
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://task-manager-auth-mern.vercel.app",
-      "https://task-manager-auth-8dlousr3y-manojkumar-merns-projects.vercel.app",
-    ],
+    origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
