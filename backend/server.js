@@ -8,10 +8,11 @@ connectDB();
 
 const app = express();
 
-// middleware
+// CORS middleware
 app.use(
   cors({
     origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 );
@@ -27,4 +28,5 @@ app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
