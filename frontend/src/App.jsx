@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ForgotPassword from "./pages/ForgotPassword";
-import ResetPassword from "./pages/ResetPassword";
+import ResetPassword from "./pages/resetPassword";
 
 export default function App() {
   const [userInfo, setUserInfo] = useState(() => {

@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import API from "../api";
 import "./auth.css";
 
-export default function ResetPassword() {
+export default function resetPassword() {
   const { token } = useParams();
   const navigate = useNavigate();
 
