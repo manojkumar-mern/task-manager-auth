@@ -8,17 +8,15 @@ connectDB();
 
 const app = express();
 
+// CORS FIX
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin) return callback(null, true);
-
-      if (origin.includes("vercel.app") || origin.includes("localhost")) {
-        return callback(null, true);
-      }
-
-      return callback(new Error("Not allowed by CORS"));
-    },
+    origin: [
+      "http://localhost:5173",
+      "https://task-manager-auth-mern.vercel.app",
+      "https://task-manager-auth-8dlousr3y-manojkumar-merns-projects.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
 );
@@ -29,11 +27,9 @@ app.get("/", (req, res) => {
   res.send("API running");
 });
 
+// routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 
 const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
