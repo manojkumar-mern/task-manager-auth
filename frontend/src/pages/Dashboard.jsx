@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import axios from "../api/axios"; // your axios instance
+import axios from "../api/axios";
 import TaskForm from "../components/TaskForm";
 import TaskList from "../components/TaskList";
 import "./dashboard.css";

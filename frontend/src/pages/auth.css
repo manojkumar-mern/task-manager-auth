@@ -1,6 +1,5 @@
 .auth {
     min-height: calc(100vh - 70px);
-    /*  navbar height adjust */
     display: flex;
     justify-content: center;
     align-items: center;
