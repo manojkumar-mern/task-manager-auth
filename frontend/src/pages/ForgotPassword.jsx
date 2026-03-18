@@ -13,7 +13,7 @@ export default function ForgotPassword() {
     setMsg("");
 
     try {
-      const res = await API.post("/auth/forgot-password", { email });
+      const res = await API.post("/api/auth/forgot-password", { email });
 
       const token = res.data.resetToken;
 
@@ -26,7 +26,6 @@ export default function ForgotPassword() {
 
   return (
     <div className="auth">
-      {/*  page-specific class to avoid shrink */}
       <div className="auth__card auth__card--forgot">
         <h2 className="auth__title">Forgot Password</h2>
 

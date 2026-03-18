@@ -20,7 +20,7 @@ export default function resetPassword() {
     }
 
     try {
-      await API.post(`/auth/reset-password/${token}`, { password });
+      await API.post(`/api/auth/reset-password/${token}`, { password });
 
       alert("Password reset successful");
       navigate("/login");
