@@ -16,7 +16,7 @@ export default function SignUp({ setUserInfo }) {
     setMsg("");
 
     try {
-      const res = await API.post("/auth/signup", { name, email, password });
+      const res = await API.post("/api/auth/signup", { name, email, password });
 
       localStorage.setItem("userInfo", JSON.stringify(res.data));
       localStorage.setItem("token", res.data.token);

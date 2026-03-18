@@ -17,7 +17,7 @@ export default function Login({ setUserInfo }) {
     setLoading(true);
 
     try {
-      const res = await API.post("/auth/login", { email, password });
+      const res = await API.post("/api/auth/login", { email, password });
 
       //  store user info
       localStorage.setItem("userInfo", JSON.stringify(res.data));
