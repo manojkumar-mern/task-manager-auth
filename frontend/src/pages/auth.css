@@ -87,7 +87,6 @@
 
 .auth__card--forgot {
     min-height: 320px;
-    /* 👈 key fix */
     display: flex;
     flex-direction: column;
     justify-content: center;
