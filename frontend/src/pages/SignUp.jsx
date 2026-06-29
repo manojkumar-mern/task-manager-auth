@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import API from "../api";
 import "./auth.css";
 
@@ -32,7 +32,7 @@ export default function SignUp({ setUserInfo }) {
   return (
     <div className="auth">
       <div className="auth__card">
-        <h2 className="auth__title">Signup</h2>
+        <h2 className="auth__title">Sign up</h2>
 
         {msg && <p className="auth__error">{msg}</p>}
 
@@ -59,7 +59,17 @@ export default function SignUp({ setUserInfo }) {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button className="auth__btn">Signup</button>
+          <button className="auth__btn">Sign up</button>
+
+          <p className="auth__login">
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              className="auth__login-link"
+            >
+              Log in
+            </Link>
+          </p>
         </form>
       </div>
     </div>

@@ -63,15 +63,38 @@
     text-align: center;
 }
 
+.auth__signup,
+.auth__login {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+}
+
+.auth__signup-link,
+.auth__login-link {
+    color: #22c55e;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth__signup-link:hover,
+.auth__login-link:hover {
+    color: #16a34a;
+    text-decoration: underline;
+}
+
 .auth__forgot {
-    margin-top: 10px;
-    text-align: right;
+    margin-top: 8px;
+    text-align: center;
 }
 
 .auth__forgot a {
-    font-size: 14px;
     color: #2563eb;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .auth__forgot a:hover {

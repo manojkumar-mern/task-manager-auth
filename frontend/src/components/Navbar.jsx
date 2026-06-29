@@ -35,17 +35,17 @@ const Navbar = ({ userInfo, setUserInfo }) => {
               </Link>
 
               <button onClick={handleLogout} className="nav__btn nav__btn--out">
-                Logout
+                Log out
               </button>
             </>
           ) : (
             <>
               <Link className="nav__btn nav__btn--in" to="/login">
-                Login
+                Log in
               </Link>
 
               <Link className="nav__btn nav__btn--up" to="/register">
-                Signup
+                Sign up
               </Link>
             </>
           )}

@@ -26,7 +26,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* CARD */
 .card {
     background: #fff;
     border-radius: 16px;
@@ -45,7 +44,6 @@ body {
     color: #666;
 }
 
-/* STATS */
 .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,7 +71,6 @@ body {
     font-weight: 800;
 }
 
-/* INPUT */
 .input {
     width: 100%;
     border: 1px solid #ddd;
@@ -93,7 +90,6 @@ body {
     min-height: 80px;
 }
 
-/* BUTTONS */
 .btn {
     border: none;
     padding: 10px 16px;
@@ -122,13 +118,11 @@ body {
     color: #fff;
 }
 
-/* SECTION TITLE */
 .section-title {
     margin: 0 0 14px;
     font-size: 18px;
 }
 
-/* FILTERS */
 .filters {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -141,7 +135,6 @@ body {
     font-size: 14px;
 }
 
-/* TASK FORM */
 .taskform__header {
     display: flex;
     justify-content: space-between;
@@ -173,7 +166,6 @@ body {
     color: #444;
 }
 
-/* TASK ITEM */
 .taskitem {
     background: #fff;
     border-radius: 16px;
@@ -212,7 +204,6 @@ body {
     justify-content: flex-end;
 }
 
-/* BADGES */
 .badge {
     font-size: 11px;
     font-weight: 800;
@@ -242,21 +233,18 @@ body {
     background: rgba(239, 68, 68, 0.12);
 }
 
-/* ACTION BUTTONS */
 .taskitem__actions {
     display: flex;
     gap: 10px;
     margin-top: 14px;
 }
 
-/* EMPTY */
 .empty {
     text-align: center;
     color: #666;
     margin-top: 20px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 700px) {
     .stats {
         grid-template-columns: 1fr;

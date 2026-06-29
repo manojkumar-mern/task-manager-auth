@@ -19,12 +19,11 @@ export default function Login({ setUserInfo }) {
     try {
       const res = await API.post("/api/auth/login", { email, password });
 
-      //  store user info
       localStorage.setItem("userInfo", JSON.stringify(res.data));
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
-      setUserInfo(res.data); // update navbar instantly
+      setUserInfo(res.data);
       navigate("/dashboard");
     } catch (err) {
       setMsg(err.response?.data?.msg || "Login failed");
@@ -36,7 +35,7 @@ export default function Login({ setUserInfo }) {
   return (
     <div className="auth">
       <div className="auth__card">
-        <h2 className="auth__title">Login</h2>
+        <h2 className="auth__title">Log in</h2>
 
         {msg && <p className="auth__error">{msg}</p>}
 
@@ -60,10 +59,19 @@ export default function Login({ setUserInfo }) {
           />
 
           <button className="auth__btn" disabled={loading}>
-            {loading ? "Logging in..." : "Login"}
+            {loading ? "Logging in..." : "Log in"}
           </button>
 
-          {/*  Forgot password */}
+          <p className="auth__signup">
+            Don't have an account?{" "}
+            <Link
+              to="/register"
+              className="auth__signup-link"
+            >
+              Sign Up
+            </Link>
+          </p>
+
           <p className="auth__forgot">
             <Link to="/forgot-password">Forgot password?</Link>
           </p>
