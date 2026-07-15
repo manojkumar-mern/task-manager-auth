@@ -116,7 +116,7 @@
     }
 
     .nav__logo--center {
-        justify-self: start;
+        justify-self: center;
     }
 
     .nav__logo {
